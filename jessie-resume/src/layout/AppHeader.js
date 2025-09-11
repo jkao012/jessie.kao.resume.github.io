@@ -21,7 +21,6 @@ const AppHeader = () => {
     <Box
       sx={{
         width: "100%",
-        typography: "body1",
       }}
     >
       <TabContext value={value}>
@@ -29,9 +28,9 @@ const AppHeader = () => {
           sx={{
             borderBottom: 1,
             borderColor: "divider",
+            boxShadow: 2,
             display: "flex",
             justifyContent: "flex-end",
-            mr: 2,
           }}
         >
           <TabList
@@ -40,6 +39,7 @@ const AppHeader = () => {
               "& .MuiTabs-indicator": {
                 backgroundColor: "#7a5e4bff",
               },
+              mr: 2,
             }}
             onChange={handleTabChange}
           >

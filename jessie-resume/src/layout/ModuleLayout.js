@@ -5,8 +5,12 @@ import App from "../App";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#000000",
-      dark: "#265F39",
+      main: "#7a5e4bff",
+      dark: "#553824ff",
+    },
+    background: {
+      main: "#fffcf5ff",
+      light: "#fffefdff",
     },
   },
   typography: {

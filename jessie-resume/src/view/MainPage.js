@@ -24,7 +24,7 @@ const MainPage = () => {
           Jessie Kao
         </Typography>
         <Typography variant="h5" sx={{ color: theme.palette.primary.main }}>
-          Wellcome to my resume website! Jessie is a GIS master graduate who
+          Welcome to my resume website! Jessie is a GIS master graduate who
           offers GIS-based digital services to achieve sustainability and
           accelerate smart society development.
         </Typography>

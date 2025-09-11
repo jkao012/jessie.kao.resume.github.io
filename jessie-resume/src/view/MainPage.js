@@ -1,15 +1,24 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+// import Tab from "@mui/material/Tab";
+// import TabContext from "@mui/lab/TabContext";
+// import TabList from "@mui/lab/TabList";
+// import TabPanel from "@mui/lab/TabPanel";
 
 const MainPage = () => {
   const theme = useTheme();
+
   return (
     <Box width="100%" minHeight="500px" justifyContent="center" display="flex">
+      {/* <TabPanel value="1">Item One</TabPanel>
+        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="3">Item Three</TabPanel> */}
+
       <Box
         display="flex"
         flexDirection="column"
-        sx={{ justifyContent: "flex-start" }}
+        sx={{ justifyContent: "flex-start", m: 10 }}
       >
         <Typography variant="h3" sx={{ color: theme.palette.primary.main }}>
           Jessie Kao

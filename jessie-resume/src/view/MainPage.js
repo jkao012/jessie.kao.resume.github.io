@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Button, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const MainPage = () => {
   const theme = useTheme();
@@ -10,8 +11,11 @@ const MainPage = () => {
         flexDirection="column"
         sx={{ justifyContent: "flex-start" }}
       >
+        <Typography variant="h3" sx={{ color: theme.palette.primary.main }}>
+          Jessie Kao
+        </Typography>
         <Typography variant="h5" sx={{ color: theme.palette.primary.main }}>
-          Jessie Kao Resume
+          Wellcome to my resume website!
         </Typography>
       </Box>
     </Box>

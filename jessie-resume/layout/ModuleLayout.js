@@ -3,69 +3,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#24B855",
-      dark: "#265F39",
-    },
-    secondary: {
-      main: "#006CB7",
-      dark: "#004b80",
-    },
-    success: {
-      main: "#4ba046",
-    },
-    warning: {
-      main: "#EBB000",
-      light: "#EA5F5C",
-      backgroundColor: "#FCE9E8",
-    },
-    error: {
-      main: "#E53935",
-      dark: "#7F1210",
-      light: "#C15700",
-      backgroundColor: "#FCE9E8",
-    },
-    background: {
-      default: grey[300],
-      paper: "#FFFFFF",
-    },
-    valid: {
-      main: "#00ACC1",
-      dark: "#00515C",
-      light: "#00ACC1",
-      backgroundColor: "#ccf4faff",
-    },
-    completed: {
-      main: "#78909C",
-      dark: "#78909C",
-      light: "#78909C",
-      backgroundColor: "#EAEEF0",
-    },
-    add: {
-      main: "#C4C4C4",
-      dark: "#8A8A8A",
-      light: "#E0E0E0",
-    },
-    black: {
       main: "#000000",
-    },
-    white: {
-      main: "#FFFFFF",
-    },
-    gray: {
-      main: "#cbd4ce",
-      light: "#E0E0E0",
-      dark: "#C4C4C4",
-    },
-    infomational: {
-      main: "#12BA90",
-      light: "#DEFCF4",
-      dark: "#0B7056",
-    },
-    Non_Compliance: {
-      main: "#BAB70F",
-    },
-    Non_Registered: {
-      main: "#9D0000",
+      dark: "#265F39",
     },
   },
   typography: {
@@ -221,21 +160,15 @@ const theme = createTheme({
         },
       },
     },
-    MuiPickersDay: {
-      styleOverrides: {
-        root: {
-          ":hover": {
-            color: "white",
-            backgroundColor: "#24B855",
-          },
-        },
-      },
-    },
   },
 });
 
 const ModuleLayout = () => {
-  return <ThemeProvider theme={theme}></ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
 };
 
 export default ModuleLayout;

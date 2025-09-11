@@ -8,7 +8,7 @@ const MainPage = () => {
       <Box
         display="flex"
         flexDirection="column"
-        sx={{ justifyContent: "center" }}
+        sx={{ justifyContent: "flex-start" }}
       >
         <Typography variant="h5" sx={{ color: theme.palette.primary.main }}>
           Jessie Kao Resume

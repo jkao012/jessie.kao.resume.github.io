@@ -6,12 +6,15 @@ import TabPanel from "@mui/lab/TabPanel";
 import { Box, Button, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import MainPage from "../view/MainPage";
+import Icon from "../icon/earth.png";
 
 const AppHeader = ({ value, setValue }) => {
   const theme = useTheme();
 
   const handleTextColor = (tabValue) => {
-    return value === tabValue ? "#7a5e4bff" : theme.palette.primary.main;
+    return value === tabValue
+      ? theme.palette.background.dark
+      : theme.palette.background.light;
   };
   const handleTabChange = (event, newValue) => {
     setValue(newValue);
@@ -25,20 +28,29 @@ const AppHeader = ({ value, setValue }) => {
       <TabContext value={value}>
         <Box
           sx={{
-            borderBottom: 1,
-            borderColor: "divider",
-            boxShadow: 1,
+            // borderBottom: 1,
+            // borderColor: "divider",
+            // boxShadow: 1,
             display: "flex",
             justifyContent: "flex-end",
-            backgroundColor: theme.palette.background.main,
+            //backgroundColor: theme.palette.background.main,
           }}
         >
           <Box display="flex" sx={{ flexGrow: 1, alignItems: "center", ml: 2 }}>
+            <img
+              src={Icon}
+              alt="icon"
+              style={{
+                maxWidth: "30px",
+                maxHeight: "30px",
+                marginRight: "5px",
+              }}
+            />
             <Typography
               sx={{
                 textfont: "18px",
                 fontWeight: "bold",
-                color: theme.palette.primary.dark,
+                color: theme.palette.background.light,
               }}
             >
               JESSIE'S PORTFOLIO
@@ -57,22 +69,34 @@ const AppHeader = ({ value, setValue }) => {
           >
             <Tab
               label="Home Page"
-              sx={{ color: handleTextColor("1"), fontSize: "16px" }}
+              sx={{
+                color: handleTextColor("1"),
+                fontSize: "16px",
+                fontWeight: 600,
+              }}
               value="1"
             />
             <Tab
               label="Education"
-              sx={{ color: handleTextColor("2"), fontSize: "16px" }}
+              sx={{
+                color: handleTextColor("2"),
+                fontSize: "16px",
+                fontWeight: 600,
+              }}
               value="2"
             />
             <Tab
               label="Projects"
-              sx={{ color: handleTextColor("3"), fontSize: "16px" }}
+              sx={{
+                color: handleTextColor("3"),
+                fontSize: "16px",
+                fontWeight: 600,
+              }}
               value="3"
             />
           </TabList>
         </Box>
-        <TabPanel value="1">
+        <TabPanel value="1" sx={{ p: 0 }}>
           <MainPage />
         </TabPanel>
       </TabContext>

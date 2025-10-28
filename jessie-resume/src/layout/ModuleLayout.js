@@ -62,6 +62,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 40,
+          textTransform: "none",
         },
         outlined: {
           m: 1,

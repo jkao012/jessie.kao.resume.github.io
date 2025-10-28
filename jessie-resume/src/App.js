@@ -25,7 +25,7 @@ function App() {
         <Box
           sx={{
             minHeight: "500px",
-            display: "flex",
+            display: "fixed",
             flexDirection: "column",
             backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(255, 252, 245, 1) 100%), url(${Banner})`,
             backgroundSize: "cover",

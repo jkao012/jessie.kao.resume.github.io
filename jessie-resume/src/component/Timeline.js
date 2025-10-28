@@ -1,0 +1,54 @@
+import React from "react";
+import { Box, Button, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+
+function StudyTimeline() {
+  const theme = useTheme();
+
+  const StudyItem = ({ dotColor, content, type, year, school }) => {
+    return (
+      <TimelineItem>
+        <TimelineOppositeContent color="text.secondary">
+          {year}
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: dotColor }} />
+          {type !== "end" && <TimelineConnector />}
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography variant="body1">{content}</Typography>
+          <Typography variant="body2">{school}</Typography>
+        </TimelineContent>
+      </TimelineItem>
+    );
+  };
+
+  return (
+    <Box>
+      <Timeline>
+        <StudyItem
+          year="2023"
+          content="MSc in Geomatic (Geographic Information System)"
+          school="Hong Kong Polytechnic University"
+          dotColor={theme.palette.primary.main}
+        />
+        <StudyItem
+          year="2019"
+          content="BSc in Quantitative Social Analysis"
+          school="Hong Kong University of Science and Technology"
+          dotColor={theme.palette.primary.main}
+          type="end"
+        />
+      </Timeline>
+    </Box>
+  );
+}
+
+export default StudyTimeline;

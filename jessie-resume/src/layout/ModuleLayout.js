@@ -9,9 +9,8 @@ const theme = createTheme({
       dark: "#553824ff",
     },
     background: {
-      main: "rgba(255, 252, 245, 1)",
-      light: "#fffefdff",
-      dark: "#fce2c8ff",
+      main: "#FFEFDA",
+      dark: "#FFE3C7",
     },
     white: {
       main: "#ffffff",
@@ -23,6 +22,7 @@ const theme = createTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
+    h1: { fontWeight: 500, fontSize: 64 },
     h2: { fontWeight: 500, fontSize: 40 },
     h3: { fontWeight: 500, fontSize: 32 },
     h4: { fontWeight: 500, fontSize: 24 },
@@ -31,9 +31,9 @@ const theme = createTheme({
     subtitle1: { fontWeight: 600, fontSize: 16 },
     subtitle2: { fontWeight: 600, fontSize: 14 },
     subtitle3: { fontWeight: 600, fontSize: 12 },
-    body1: { fontWeight: 400, fontSize: 16 },
-    body2: { fontWeight: 400, fontSize: 14 },
-    body3: { fontWeight: 400, fontSize: 10 },
+    body1: { fontWeight: 400, fontSize: 24 },
+    body2: { fontWeight: 400, fontSize: 20 },
+    body3: { fontWeight: 400, fontSize: 16 },
     caption: { fontWeight: 400, fontSize: 8 },
   },
   components: {
@@ -64,15 +64,14 @@ const theme = createTheme({
           borderRadius: 40,
           textTransform: "none",
         },
-        outlined: {
-          m: 1,
-          backgroundColor: "#F8FCF9",
-          color: "#265F39",
-          border: "2px solid #24B855",
+        filled: {
+          m: 2,
+          backgroundColor: "#E66E23",
+          color: "#FFFFFF",
           fontWeight: 600,
           fontSize: "16px !important",
           ":hover": {
-            border: "2px solid #265F39",
+            backgroundColor: "#AD2E01",
           },
         },
       },

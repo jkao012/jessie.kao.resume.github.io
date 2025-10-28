@@ -8,55 +8,25 @@ const MainPage = ({ value }) => {
   const theme = useTheme();
 
   return (
-    <Box
-      width="100%"
-      // justifyContent="center"
-      display="flex"
-      // sx={{
-      //   backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 100%), url(${Banner})`,
-      //   backgroundSize: "cover",
-      // }}
-      flexDirection="column"
-    >
+    <Box width="100%" display="flex" flexDirection="column">
       <Box
         display="flex"
         flexDirection="column"
         gap={3}
         sx={{
           justifyContent: "flex-start",
-          mx: 10,
-          mt: 5,
-          mb: 10,
-          width: "70%",
+          my: 10,
+          mx: 15,
         }}
       >
-        <Typography
-          variant="h2"
-          sx={{
-            color: theme.palette.background.main,
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
-          }}
-        >
-          Welcome to Jessie's Portfolio!
+        <Typography variant="h1">
+          Welcome to <br></br>Jessie's Portfolio!
         </Typography>
-        <Typography
-          variant="h5"
-          sx={{
-            color: theme.palette.background.main,
-            textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
-          }}
-        >
-          Hi! This is Jessie Kao. I am a GIS master graduate who offers
-          GIS-based digital advisory to achieve sustainability and accelerate
-          smart society development.
+        <Typography variant="h4" width="85%">
+          Hi! This is Jessie. I am a GIS master graduate who offers GIS-based
+          digital advisory to achieve and accelerate smart city development.
         </Typography>
-        <Typography
-          variant="h6"
-          sx={{
-            color: theme.palette.background.main,
-            textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
-          }}
-        >
+        <Typography variant="h6">
           Participated in GIS-based projects to create interactive dashboard and
           app for clients’ needs. Usually approached software and products
           include ArcGIS Pro, ArcGIS Enterprises (Dashboard and Experience
@@ -66,39 +36,24 @@ const MainPage = ({ value }) => {
       <Box
         display="flex"
         flexDirection="column"
-        gap={3}
         sx={{
-          justifyContent: "center",
-          alignItems: "center",
-          mx: 10,
-          mb: 10,
+          backgroundColor: theme.palette.background.dark,
+          py: 10,
         }}
       >
-        <Typography variant="h3">Education</Typography>
-        <Box display="flex" flexDirection="row" width="100%" gap={3}>
-          <Button
-            sx={{
-              backgroundColor: theme.palette.background.dark,
-              width: "50%",
-            }}
-          >
-            <Box display="flex" flexDirection="column" gap={1} padding={2}>
-              <Typography variant="h4">My Bachelor Degree</Typography>
-            </Box>
-          </Button>
-          <Button
-            sx={{
-              backgroundColor: theme.palette.background.dark,
-              width: "50%",
-            }}
-          >
-            <Box display="flex" flexDirection="column" gap={1} padding={2}>
-              <Typography variant="h4">My Master Degree</Typography>
-            </Box>
-          </Button>
+        <Box
+          sx={{
+            justifyContent: "flex-start",
+            mx: 15,
+          }}
+        >
+          <Typography variant="h3">My Education</Typography>
+          <Box sx={{ my: 5 }}>
+            <Timeline />
+          </Box>
+          <Button variant="filled">Explore More!</Button>
         </Box>
       </Box>
-      <Timeline />
     </Box>
   );
 };

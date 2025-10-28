@@ -7,12 +7,14 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineOppositeContent, {
+  timelineOppositeContentClasses,
+} from "@mui/lab/TimelineOppositeContent";
 
 function StudyTimeline() {
   const theme = useTheme();
 
-  const StudyItem = ({ dotColor, content, type, year, school }) => {
+  const StudyItem = ({ dotColor, content, type, year, school, remark }) => {
     return (
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
@@ -24,7 +26,8 @@ function StudyTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <Typography variant="body1">{content}</Typography>
-          <Typography variant="body2">{school}</Typography>
+          <Typography variant="body2">{remark}</Typography>
+          <Typography variant="body3">{school}</Typography>
         </TimelineContent>
       </TimelineItem>
     );
@@ -32,10 +35,16 @@ function StudyTimeline() {
 
   return (
     <Box>
-      <Timeline>
+      <Timeline
+        sx={{
+          [`& .${timelineOppositeContentClasses.root}`]: {
+            flex: 0.1,
+          },
+        }}
+      >
         <StudyItem
           year="2023"
-          content="MSc in Geomatic (Geographic Information System)"
+          content="MSc in Geomatic (Geographic Information System) with Distinction"
           school="Hong Kong Polytechnic University"
           dotColor={theme.palette.primary.main}
         />
@@ -43,6 +52,7 @@ function StudyTimeline() {
           year="2019"
           content="BSc in Quantitative Social Analysis"
           school="Hong Kong University of Science and Technology"
+          remark="Minor in Mathematics & Minor in China Studies"
           dotColor={theme.palette.primary.main}
           type="end"
         />

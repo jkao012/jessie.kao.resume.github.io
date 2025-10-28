@@ -19,7 +19,7 @@ const theme = createTheme({
   },
   typography: {
     fontSize: 12,
-    fontFamily: ["Ubuntu"].join(","),
+    fontFamily: ["Inter"].join(","),
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
